@@ -23,10 +23,11 @@
     <div id="myChart" :style="{width: '300px', height: '300px'}"></div>
     <div class="row-rightSkills">
       <div class="skillsJavaScript">
-        <el-progress :percentage="toNumber(75)" :width="50" type="circle" color="#b34242d5"></el-progress>
+        <el-progress :percentage="toNumber(70)" :width="50" type="circle" color="#b34242d5"></el-progress>
         <svg class="javascript" aria-hidden="true">
           <use xlink:href="#icon-socialjavascript"></use>
         </svg>
+        <div class="skillsDiscription">adsfasdfadfasdf</div>
       </div>
     </div>
   </div>
@@ -118,7 +119,7 @@ export default {
 						},
 						data: [
 							{
-								value: [30, 50, 60, 80, 85, 60],
+								value: [30, 50, 60, 70, 80, 60],
 								name: ""
 							}
 						]
@@ -165,12 +166,24 @@ export default {
 		}
 	}
 	.row-rightSkills {
+		margin-left: 60px;
 		display: flex;
+		position: relative;
 		.skillsJavaScript {
-			svg {
+			display: flex;
+			.el-progress__text {
+				display: none;
+			}
+			.javascript {
+				position: absolute;
+				left: 15px;
+				top: 15px;
 				fill: #f8f8f8;
-				height: 50px;
-				width: 50px;
+				height: 20px;
+				width: 20px;
+			}
+			.skillsDiscription {
+				margin-left: 30px;
 			}
 		}
 	}

@@ -134,8 +134,9 @@ $designWidth: 1920;
 								display: flex;
 								h1 {
 									margin: 0;
-									font-family: "Courier New",
-										Courier, monospace;
+									font-family: "Franklin Gothic Medium",
+										"Arial Narrow", Arial,
+										sans-serif;
 									font-weight: 100;
 									font-size: 50px;
 								}
