@@ -22,12 +22,14 @@
     </div>
     <div id="myChart" :style="{width: '300px', height: '300px'}"></div>
     <div class="row-rightSkills">
-      <div class="skillsJavaScript">
+      <div class="skillsContent">
         <el-progress :percentage="toNumber(70)" :width="50" type="circle" color="#b34242d5"></el-progress>
-        <svg class="javascript" aria-hidden="true">
+        <svg class="skillsIcon" aria-hidden="true">
           <use xlink:href="#icon-socialjavascript"></use>
         </svg>
-        <div class="skillsDiscription">adsfasdfadfasdf</div>
+        <div class="skillsDiscription">
+          <p>在不使用框架的前提下能够使用原生 JS 常用 API 完成部分需求。熟悉 jQuery 常用API，能使用jQuery制作网站、轮播、tab组件等</p>
+        </div>
       </div>
     </div>
   </div>
@@ -167,23 +169,36 @@ export default {
 	}
 	.row-rightSkills {
 		margin-left: 60px;
+		height: 100%;
+		width: 60%;
+		padding: 10px;
 		display: flex;
 		position: relative;
-		.skillsJavaScript {
+		border-left: 2px solid #c75454;
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+		.skillsContent {
 			display: flex;
 			.el-progress__text {
 				display: none;
 			}
-			.javascript {
+			.el-progress.el-progress--circle {
+				height: 50px;
+			}
+			.skillsIcon {
 				position: absolute;
-				left: 15px;
-				top: 15px;
+				left: 25px;
+				top: 25px;
 				fill: #f8f8f8;
 				height: 20px;
 				width: 20px;
 			}
 			.skillsDiscription {
-				margin-left: 30px;
+				margin-left: 20px;
+				p {
+					font-weight: normal;
+					color: #b9b9b9;
+					text-align: left;
+				}
 			}
 		}
 	}

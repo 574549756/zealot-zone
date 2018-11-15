@@ -128,6 +128,11 @@ $designWidth: 1920;
 											color: #787878;
 										}
 									}
+									.messageContent {
+										p {
+											font-weight: normal;
+										}
+									}
 								}
 							}
 							> .aboutMe-message {
@@ -256,7 +261,7 @@ $designWidth: 1920;
 					align-items: flex-start;
 					justify-content: flex-start;
 					width: 100%;
-					margin-bottom: 40px;
+					margin-bottom: 30px;
 					.jobExperience-duration {
 						width: 155px;
 						font-size: 20px;
