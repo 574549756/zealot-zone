@@ -53,20 +53,19 @@ $designWidth: 1920;
 	main.inner-container {
 		display: block;
 		height: 100vh;
-		overflow-x: hidden;
+		overflow-x: auto;
 		overflow-y: scroll;
 		&::-webkit-scrollbar {
 			display: none;
 		}
 		div.aboutMe-Container {
-			margin: 120px 120px 0 120px;
+			margin: 120px 0;
 			color: rgb(255, 255, 255);
 			display: flex;
 			width: 900px;
 			flex-direction: column;
 			header.aboutMe-header {
 				display: flex;
-
 				div.aboutMe-header-text {
 					display: flex;
 					flex-direction: column;
@@ -145,23 +144,28 @@ $designWidth: 1920;
 									font-weight: 100;
 									font-size: 50px;
 								}
-								h2 {
-									font-weight: 100;
-									font-size: 24px;
-									color: rgb(175, 175, 175);
-								}
-								.aboutMe-message-title2-site {
-									display: flex;
-									justify-content: flex-start;
-									align-items: center;
-									svg {
-										fill: rgb(112, 112, 112);
-										height: 20px;
-										width: 20px;
+								.aboutMe-message-tltle2 {
+									display: inherit;
+									flex-direction: column;
+									justify-content: center;
+									h2 {
+										font-weight: 100;
+										font-size: 24px;
+										color: rgb(175, 175, 175);
 									}
-									p {
-										color: rgb(112, 112, 112);
-										font-size: 15px;
+									.aboutMe-message-title2-site {
+										display: flex;
+										justify-content: flex-start;
+										align-items: center;
+										svg {
+											fill: rgb(112, 112, 112);
+											height: 20px;
+											width: 20px;
+										}
+										p {
+											color: rgb(112, 112, 112);
+											font-size: 15px;
+										}
 									}
 								}
 							}
@@ -252,7 +256,7 @@ $designWidth: 1920;
 				}
 			}
 			.jobExperience {
-				margin-top: 130px;
+				margin-top: 60px;
 				margin-bottom: 130px;
 				display: block;
 				height: 100%;
@@ -263,17 +267,17 @@ $designWidth: 1920;
 					width: 100%;
 					margin-bottom: 30px;
 					.jobExperience-duration {
-						width: 155px;
+						width: 20%;
 						font-size: 20px;
 						text-align: left;
 						display: block;
 						border-left: 2px solid #c75454;
-						padding: 5px 10px;
+						padding: 10px 15px;
 						box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 					}
 					.dutyAndCompany {
 						display: flex;
-						margin-left: 23%;
+						margin-left: 20%;
 						.duty {
 							font-size: 30px;
 							font-weight: 100;

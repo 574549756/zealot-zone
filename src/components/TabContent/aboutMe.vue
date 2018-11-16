@@ -95,6 +95,7 @@
     </header>
     <main class="skills">
       <radar/>
+      <skillsRowButtom/>
     </main>
     <main class="jobExperience">
       <div class="jobExperience-row">
@@ -131,10 +132,12 @@
   </div>
 </template>
 <script>
+import skillsRowButtom from "./about/skills-row-Buttom"
 import radar from "./radar"
 export default {
 	components: {
-		radar
+		radar,
+		skillsRowButtom
 	}
 }
 </script>

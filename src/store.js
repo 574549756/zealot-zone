@@ -11,6 +11,12 @@ export default new Vuex.Store({
 			blog: false,
 			ability: false,
 			normal: true
+		},
+		aboutMe: {
+			personalInfo: {},
+			connection: [],
+			skills: [],
+			jobExperience: []
 		}
 	},
 	mutations: {},

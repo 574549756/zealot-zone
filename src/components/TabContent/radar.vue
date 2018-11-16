@@ -1,30 +1,32 @@
 <template>
   <div class="skillsRadar">
-    <div class="skillsIcon">
-      <svg class="vue" aria-hidden="true">
-        <use xlink:href="#icon-vuejs"></use>
-      </svg>
-      <svg class="node" aria-hidden="true">
-        <use xlink:href="#icon-node-js"></use>
-      </svg>
-      <svg class="http" aria-hidden="true">
-        <use xlink:href="#icon-http"></use>
-      </svg>
-      <svg class="cli" aria-hidden="true">
-        <use xlink:href="#icon-minglinghang"></use>
-      </svg>
-      <svg class="html" aria-hidden="true">
-        <use xlink:href="#icon-html"></use>
-      </svg>
-      <svg class="javascript" aria-hidden="true">
-        <use xlink:href="#icon-socialjavascript"></use>
-      </svg>
-    </div>
-    <div id="myChart" :style="{width: '300px', height: '300px'}"></div>
+    <main class="chartContent">
+      <div class="skillsIcon">
+        <svg class="vue" aria-hidden="true">
+          <use xlink:href="#icon-vuejs"></use>
+        </svg>
+        <svg class="node" aria-hidden="true">
+          <use xlink:href="#icon-node-js"></use>
+        </svg>
+        <svg class="http" aria-hidden="true">
+          <use xlink:href="#icon-http"></use>
+        </svg>
+        <svg class="cli" aria-hidden="true">
+          <use xlink:href="#icon-minglinghang"></use>
+        </svg>
+        <svg class="html" aria-hidden="true">
+          <use xlink:href="#icon-html"></use>
+        </svg>
+        <svg class="javascript" aria-hidden="true">
+          <use xlink:href="#icon-socialjavascript"></use>
+        </svg>
+      </div>
+      <div id="myChart" :style="{width: '300px', height: '300px'}"></div>
+    </main>
     <div class="row-rightSkills">
       <div class="skillsContent">
         <el-progress :percentage="toNumber(70)" :width="50" type="circle" color="#b34242d5"></el-progress>
-        <svg class="skillsIcon" aria-hidden="true">
+        <svg class="skillIcon" aria-hidden="true">
           <use xlink:href="#icon-socialjavascript"></use>
         </svg>
         <div class="skillsDiscription">
@@ -134,26 +136,27 @@ export default {
 </script>
 
 <style lang="scss">
-.skillsRadar {
-	margin-top: 50px;
-	position: relative;
+.skills {
+	margin-top: 90px;
+	width: 900px;
 	display: flex;
-	.header {
+	.skillsRadar {
+		position: relative;
+		height: 100%;
+		width: 37%;
+		margin-right: 3%;
 		display: flex;
+		align-items: center;
 		flex-direction: column;
-		align-items: flex-start;
-		margin: 30px 0 20px 0;
-		h3 {
-			color: white;
-			margin: 0 0 10px 4vw;
-		}
-		.breakLine {
-			align-self: center;
-			background-color: #bcbcbe;
-			height: 1px;
-			width: 25vw;
-			z-index: 100;
-			position: relative;
+		.header {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin: 30px 0 20px 0;
+			h3 {
+				color: white;
+				margin: 0 0 10px 4vw;
+			}
 
 			&::before {
 				position: absolute;
@@ -166,84 +169,89 @@ export default {
 				width: 4.25vw;
 			}
 		}
-	}
-	.row-rightSkills {
-		margin-left: 60px;
-		height: 100%;
-		width: 60%;
-		padding: 10px;
-		display: flex;
-		position: relative;
-		border-left: 2px solid #c75454;
-		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-		.skillsContent {
+
+		.row-rightSkills {
+			flex-direction: column;
+
 			display: flex;
-			.el-progress__text {
-				display: none;
-			}
-			.el-progress.el-progress--circle {
-				height: 50px;
-			}
-			.skillsIcon {
-				position: absolute;
-				left: 25px;
-				top: 25px;
-				fill: #f8f8f8;
-				height: 20px;
-				width: 20px;
-			}
-			.skillsDiscription {
-				margin-left: 20px;
-				p {
-					font-weight: normal;
-					color: #b9b9b9;
-					text-align: left;
+
+			.skillsContent {
+				padding: 10px;
+				border-left: 2px solid #c75454;
+				box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+				display: flex;
+				position: relative;
+				margin-bottom: 30px;
+				.el-progress__text {
+					display: none;
+				}
+				.el-progress.el-progress--circle {
+					height: 50px;
+				}
+				.skillIcon {
+					position: absolute;
+					left: 25px;
+					top: 25px;
+					fill: #f8f8f8;
+					height: 20px;
+					width: 20px;
+				}
+				.skillsDiscription {
+					margin-left: 20px;
+					p {
+						font-weight: normal;
+						color: #b9b9b9;
+						text-align: left;
+					}
 				}
 			}
 		}
-	}
-	.skillsIcon {
-		z-index: 10;
-		left: 50px;
-		top: 50px;
-		position: absolute;
-		svg {
-			position: absolute;
-			fill: #f3f3f5;
-			width: 26px;
-			height: 26px;
-			background: #b34242d5;
-			border-radius: 13px;
-			border: 2px solid #b34242d5;
-		}
-		.vue {
-			top: 150px;
-			left: -25px;
-		}
-		.cli {
-			left: -25px;
-			top: 25px;
-		}
-		.node {
-			left: 87px;
-			top: -40px;
-		}
-		.http {
-			fill: #f3f3f5;
-			left: 200px;
-			top: 25px;
-		}
-		.javascript {
-			left: 87px;
-			top: 215px;
-		}
-		.html {
-			left: 200px;
-			top: 150px;
-		}
-		.css {
-			left: 136px;
-			top: 135px;
+		.chartContent {
+			margin-bottom: 50px;
+			.skillsIcon {
+				z-index: 10;
+				left: 50px;
+				top: 50px;
+				position: relative;
+				svg {
+					position: absolute;
+					fill: #f3f3f5;
+					width: 26px;
+					height: 26px;
+					background: #b34242d5;
+					border-radius: 13px;
+					border: 2px solid #b34242d5;
+				}
+				.vue {
+					top: 150px;
+					left: -25px;
+				}
+				.cli {
+					left: -25px;
+					top: 25px;
+				}
+				.node {
+					left: 87px;
+					top: -40px;
+				}
+				.http {
+					fill: #f3f3f5;
+					left: 200px;
+					top: 25px;
+				}
+				.javascript {
+					left: 87px;
+					top: 215px;
+				}
+				.html {
+					left: 200px;
+					top: 150px;
+				}
+				.css {
+					left: 136px;
+					top: 135px;
+				}
+			}
 		}
 	}
 }
