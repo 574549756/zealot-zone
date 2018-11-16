@@ -49,7 +49,7 @@ $designWidth: 1920;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0 100px;
+	padding: 0 0 0 80px;
 	main.inner-container {
 		display: block;
 		height: 100vh;
@@ -205,7 +205,6 @@ $designWidth: 1920;
 										color: white;
 									}
 									.qq {
-										margin-left: 30px;
 										fill: white;
 									}
 									a {

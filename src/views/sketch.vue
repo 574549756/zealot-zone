@@ -42,7 +42,7 @@ export default {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0 100px;
+	padding: 0 0 0 80px;
 	main.inner-container {
 		display: block;
 		height: 100vh;

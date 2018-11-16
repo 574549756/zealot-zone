@@ -65,6 +65,7 @@ export default {
 				font-weight: normal;
 				color: #b9b9b9;
 				text-align: left;
+				line-height: 20px;
 			}
 		}
 	}
