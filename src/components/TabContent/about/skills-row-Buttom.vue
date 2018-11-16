@@ -1,48 +1,17 @@
 <template>
   <main class="skillsButtom">
-    <div class="skillsContent">
-      <el-progress :percentage="toNumber(70)" :width="50" type="circle" color="#b34242d5"></el-progress>
+    <div class="skillsContent" v-for="skill in skills">
+      <el-progress
+        :percentage="toNumber(skill.progress)"
+        :width="50"
+        type="circle"
+        color="#b34242d5"
+      ></el-progress>
       <svg class="skillsIcon" aria-hidden="true">
-        <use xlink:href="#icon-socialjavascript"></use>
+        <use v-bind:xlink:href="`#icon-${skill.icon}`"></use>
       </svg>
       <div class="skillsDiscription">
-        <p>在不使用框架的前提下能够使用原生 JS 常用 API 完成部分需求。熟悉 jQuery 常用API，能使用jQuery制作网站、轮播、tab组件等</p>
-      </div>
-    </div>
-    <div class="skillsContent">
-      <el-progress :percentage="toNumber(80)" :width="50" type="circle" color="#b34242d5"></el-progress>
-      <svg class="skillsIcon" aria-hidden="true">
-        <use xlink:href="#icon-html"></use>
-      </svg>
-      <div class="skillsDiscription">
-        <p>熟练编写语义化 HTML 能使用 HTML5 CSS3 独立制作精美网页，掌握CSS3动画、过渡效果、响应式等常用技术</p>
-      </div>
-    </div>
-    <div class="skillsContent">
-      <el-progress :percentage="toNumber(30)" :width="50" type="circle" color="#b34242d5"></el-progress>
-      <svg class="skillsIcon" aria-hidden="true">
-        <use xlink:href="#icon-node-js"></use>
-      </svg>
-      <div class="skillsDiscription">
-        <p>了解 Node.js 的一些知识，能够使用 Node.js 搭建小型服务器，根据请求的 URL 返回指定数据。能够使用express进行ssr项目的搭建。</p>
-      </div>
-    </div>
-    <div class="skillsContent">
-      <el-progress :percentage="toNumber(30)" :width="50" type="circle" color="#b34242d5"></el-progress>
-      <svg class="skillsIcon" aria-hidden="true">
-        <use xlink:href="#icon-node-js"></use>
-      </svg>
-      <div class="skillsDiscription">
-        <p>了解 Node.js 的一些知识，能够使用 Node.js 搭建小型服务器，根据请求的 URL 返回指定数据。能够使用express进行ssr项目的搭建。</p>
-      </div>
-    </div>
-    <div class="skillsContent">
-      <el-progress :percentage="toNumber(30)" :width="50" type="circle" color="#b34242d5"></el-progress>
-      <svg class="skillsIcon" aria-hidden="true">
-        <use xlink:href="#icon-node-js"></use>
-      </svg>
-      <div class="skillsDiscription">
-        <p>了解 Node.js 的一些知识，能够使用 Node.js 搭建小型服务器，根据请求的 URL 返回指定数据。能够使用express进行ssr项目的搭建。</p>
+        <p>{{skill.content}}</p>
       </div>
     </div>
   </main>
@@ -50,6 +19,7 @@
 
 <script>
 export default {
+	props: ["skills"],
 	methods: {
 		toNumber(number) {
 			return number + 0

@@ -24,13 +24,18 @@
       <div id="myChart" :style="{width: '300px', height: '300px'}"></div>
     </main>
     <div class="row-rightSkills">
-      <div class="skillsContent">
-        <el-progress :percentage="toNumber(70)" :width="50" type="circle" color="#b34242d5"></el-progress>
+      <div class="skillsContent" v-for="skill in skills">
+        <el-progress
+          :percentage="toNumber(skill.progress)"
+          :width="50"
+          type="circle"
+          color="#b34242d5"
+        ></el-progress>
         <svg class="skillIcon" aria-hidden="true">
-          <use xlink:href="#icon-socialjavascript"></use>
+          <use v-bind:xlink:href="`#icon-${skill.icon}`"></use>
         </svg>
         <div class="skillsDiscription">
-          <p>在不使用框架的前提下能够使用原生 JS 常用 API 完成部分需求。熟悉 jQuery 常用API，能使用jQuery制作网站、轮播、tab组件等</p>
+          <p>{{skill.content}}</p>
         </div>
       </div>
     </div>
@@ -45,6 +50,7 @@ require("echarts/lib/chart/radar")
 require("echarts/lib/component/tooltip")
 require("echarts/lib/component/title")
 export default {
+	props: ["skills"],
 	name: "hello",
 	data() {
 		return {

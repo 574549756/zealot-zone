@@ -94,8 +94,8 @@
       </div>
     </header>
     <main class="skills">
-      <radar/>
-      <skillsRowButtom/>
+      <radar v-bind:skills="$store.state.aboutMe.skillsLeft"/>
+      <skillsRowButtom v-bind:skills="$store.state.aboutMe.skills"/>
     </main>
     <main class="jobExperience">
       <div class="jobExperience-row">
