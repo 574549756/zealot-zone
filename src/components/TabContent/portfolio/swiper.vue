@@ -88,9 +88,12 @@ export default {
 		.projectInfo {
 			background: #ffffff;
 			h2,
-			h3,
 			p {
-				color: #211e1e;
+				color: black;
+			}
+			h3 {
+				color: #777777;
+				font-weight: bold;
 			}
 		}
 	}
