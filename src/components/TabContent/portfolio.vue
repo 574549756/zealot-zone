@@ -1,6 +1,6 @@
 <template>
   <main class="skills-container">
-    <swiper/>
+    <swiper v-bind:projects="$store.state.aboutMe.portfolio"/>
     <div class="row"></div>
   </main>
 </template>

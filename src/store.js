@@ -15,46 +15,127 @@ export default new Vuex.Store({
 		aboutMe: {
 			personalInfo: {},
 			connection: [],
-			skillsLeft: [
+			portfolio: [
 				{
-					icon: "socialjavascript",
-					content:
-						"在不使用框架的前提下能够使用原生 JS 常用 API 完成部分需求。熟悉 jQuery 常用API，能使用jQuery制作网站、轮播、tab组件等",
-					progress: 80
+					name: "Canvas画板",
+					projectImg: "canvas.jpg",
+					projectIcons: [
+						"jquery",
+						"html",
+						"language-css",
+						"socialjavascript"
+					],
+					projectDis:
+						"Canvas画板，通过使用 Canvas API 实现画板的:画笔、橡皮擦、更改颜色、清屏、保存等功能。"
+				},
+				{
+					name: "KeyBoard导航页",
+					projectImg: "nav-page.jpg",
+					projectIcons: [
+						"jquery",
+						"html",
+						"language-css",
+						"socialjavascript"
+					],
+					projectDis:
+						"使用键盘的网页导航，使用原生 JS 监听键盘事件。通过favicon获取网站图标，通过　favicon.byi.pw?url=domain　排除无法获取的网站图标"
+				},
+				{
+					name: "无缝轮播组件",
+					projectImg: "slide.jpg",
+					projectIcons: [
+						"html",
+						"jquery",
+						"language-css",
+						"socialjavascript"
+					],
+					projectDis:
+						"使用 jQuery 制作。通过 settimeout 实现自动轮播，改变 class　状态机的方式来改变监听事件。"
+				},
+				{
+					name: "CSS蝙蝠侠",
+					projectImg: "cssBatman.png",
+					projectIcons: [
+						"html",
+						"jquery",
+						"language-css",
+						"socialjavascript"
+					],
+					projectDis:
+						"使用 CSS3 绘制蝙蝠侠，通过 settimeout 实现代码逐行显示，绘制蝙蝠侠的过程，可调速"
+				},
+				{
+					name: "Vue在线简历编辑器",
+					projectImg: "vueResume.png",
+					projectIcons: [
+						"vuejs",
+						"html",
+						"jquery",
+						"http",
+						"language-css",
+						"socialjavascript"
+					],
+					projectDis:
+						"通过 Vue 实现数据绑定，LeanCloud 实现用户注册登录信息的认证， SCSS 完成前端页面。实现在线简历编辑。"
+				},
+				{
+					name: "Express在线便利贴",
+					projectImg: "sticky-note.png",
+					projectIcons: [
+						"html",
+						"jquery",
+						"node-js",
+						"http",
+						"language-css",
+						"socialjavascript",
+						"sticky-note.png"
+					],
+					projectDis:
+						"基于 express 框架处理路由 中间件, ejs 模板搭建页面， less 预处理器处理页面样式，基于 auth 认证的 github 登录。以用户登录秘钥判断是否登录以限制权限。"
 				}
 			],
-			skills: [
-				{
-					icon: "html",
-					content:
-						"熟练编写语义化 HTML 能使用 HTML5 CSS3 独立制作精美网页，掌握CSS3动画、过渡效果、响应式等常用技术",
-					progress: 80
-				},
-				{
-					icon: "node-js",
-					content:
-						"了解 Node.js 的一些知识，能够使用 Node.js 搭建小型服务器，根据请求的 URL 返回指定数据。能够使用express进行ssr项目的搭建。",
-					progress: 30
-				},
-				{
-					icon: "language-css",
-					content:
-						"移动端页面 会使用 rem、vw/vh 等技术制作适配手机设备的页面，能够在项目中使用 Scss 预处理工具",
-					progress: 80
-				},
-				{
-					icon: "vuejs",
-					content:
-						"熟悉Vue常用功能如：组件、Vue-Router、vuex、双向绑定、数据响应原理等",
-					progress: 60
-				},
-				{
-					icon: "http",
-					content:
-						"了解 HTTP 基础知识，了解常见状态码的含义，能够根据请求查看响应。",
-					progress: 60
-				}
-			],
+			skills: {
+				skillsLeft: [
+					{
+						icon: "socialjavascript",
+						content:
+							"在不使用框架的前提下能够使用原生 JS 常用 API 完成部分需求。熟悉 jQuery 常用API，能使用jQuery制作网站、轮播、tab组件等",
+						progress: 80
+					}
+				],
+				skillsRight: [
+					{
+						icon: "html",
+						content:
+							"熟练编写语义化 HTML 能使用 HTML5 CSS3 独立制作精美网页，掌握CSS3动画、过渡效果、响应式等常用技术",
+						progress: 80
+					},
+					{
+						icon: "node-js",
+						content:
+							"了解 Node.js 的一些知识，能够使用 Node.js 搭建小型服务器，根据请求的 URL 返回指定数据。能够使用express进行ssr项目的搭建。",
+						progress: 30
+					},
+					{
+						icon: "language-css",
+						content:
+							"移动端页面 会使用 rem、vw/vh 等技术制作适配手机设备的页面，能够在项目中使用 Scss 预处理工具",
+						progress: 80
+					},
+					{
+						icon: "vuejs",
+						content:
+							"熟悉Vue常用功能如：组件、Vue-Router、vuex、双向绑定、数据响应原理等",
+						progress: 60
+					},
+					{
+						icon: "http",
+						content:
+							"了解 HTTP 基础知识，了解常见状态码的含义，能够根据请求查看响应。",
+						progress: 60
+					}
+				]
+			},
 			jobExperience: []
 		}
 	},
