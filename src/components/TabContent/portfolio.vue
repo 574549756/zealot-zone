@@ -1,17 +1,16 @@
 <template>
   <main class="skills-container">
-    <div class="slider">
-      <el-carousel :interval="5000" arrow="always">
-        <el-carousel-item v-for="item in 4" :key="item">
-          <h3>{{ item }}</h3>
-        </el-carousel-item>
-      </el-carousel>
-    </div>
+    <swiper/>
     <div class="row"></div>
   </main>
 </template>
 <script>
-export default {}
+import swiper from "./portfolio/swiper"
+export default {
+	components: {
+		swiper
+	}
+}
 </script>
 <style lang="scss">
 .el-carousel__item h3 {
