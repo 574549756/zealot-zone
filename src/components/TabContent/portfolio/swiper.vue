@@ -3,7 +3,27 @@
     <swiper :options="swiperOption" ref="mySwiper" @someSwiperEvent="callback">
       <!-- slides -->
       <swiper-slide v-for="project in projects">
-        <img :src="`/img/projectImgs/${project.projectImg}`" alt="projectImg">
+        <div class="projectInfo">
+          <header class="slider-header">
+            <h2>{{project.name.split(' ')[0]}}</h2>
+            <h3>{{project.name.split(' ')[1]}}</h3>
+          </header>
+          <main class="slider-discription">
+            <h3>说明</h3>
+            <p>{{project.projectDis}}</p>
+          </main>
+          <footer class="slider-techStack">
+            <h3>技术栈</h3>
+            <div class="slider-techStackIcon">
+              <svg class="icon" aria-hidden="true" v-for="projectIcon in project.projectIcons">
+                <use v-bind:xlink:href="`#icon-${projectIcon}`"></use>
+              </svg>
+            </div>
+          </footer>
+        </div>
+        <div class="imgContainer">
+          <img :src="`/img/projectImgs/${project.projectImg}`" alt="projectImg">
+        </div>
       </swiper-slide>
       <!-- Optional controls -->
       <div class="swiper-pagination" slot="pagination"></div>
@@ -61,11 +81,97 @@ export default {
 }
 </script>
 <style lang="scss">
-img {
-	width: 100%;
-}
 .slider {
-	height: 400px;
+	height: 500px;
+
+	&:hover {
+		.projectInfo {
+			background: #ffffff;
+			h2,
+			h3,
+			p {
+				color: #211e1e;
+			}
+		}
+	}
+}
+.projectInfo {
+	transition: all 0.3s;
+	padding: 40px 50px;
+	height: 100%;
+	width: 30%;
+	background: #211e1e;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	.slider-header {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		justify-content: flex-start;
+		margin-bottom: 20px;
+		h2 {
+			font-size: 30px;
+			margin-bottom: 5px;
+		}
+		h3 {
+			color: rgb(200, 200, 200);
+			font-size: 20px;
+		}
+	}
+	.slider-techStack {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		.slider-techStackIcon {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-self: flex-end;
+			svg {
+				padding: 1px;
+				width: 26px;
+				height: 26px;
+				background: #b34242d5;
+				margin-right: 10px;
+				border: 1px solid #b34242d5;
+				align-items: center;
+				border-radius: 13px;
+				margin-bottom: 8px;
+			}
+		}
+		h3 {
+			font-size: 15px;
+			margin-bottom: 10px;
+			color: #ffffff;
+			font-weight: normal;
+		}
+	}
+	.slider-discription {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		margin-bottom: 20px;
+		h3 {
+			font-size: 15px;
+			margin-bottom: 10px;
+			color: #ffffff;
+			font-weight: normal;
+		}
+		p {
+			font-size: 12px;
+			text-align: left;
+			line-height: 15px;
+			font-weight: normal;
+		}
+	}
+}
+.imgContainer {
+	width: 70%;
+	height: 100%;
 }
 .swiper-container {
 	width: 100%;

@@ -1,18 +1,23 @@
 <template>
   <main class="skills-container">
     <swiper v-bind:projects="$store.state.aboutMe.portfolio"/>
-    <div class="row"></div>
+    <projectsList :projects="$store.state.aboutMe.portfolio"/>
   </main>
 </template>
 <script>
 import swiper from "./portfolio/swiper"
+import projectsList from "./portfolio/projectsList"
 export default {
 	components: {
-		swiper
+		swiper,
+		projectsList
 	}
 }
 </script>
 <style lang="scss">
+.slider {
+	margin-bottom: 60px;
+}
 .el-carousel__item h3 {
 	color: #475669;
 	font-size: 18px;
