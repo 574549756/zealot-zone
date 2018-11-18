@@ -3,27 +3,29 @@
     <swiper :options="swiperOption" ref="mySwiper" @someSwiperEvent="callback">
       <!-- slides -->
       <swiper-slide v-for="project in projects">
-        <div class="projectInfo">
-          <header class="slider-header">
-            <h2>{{project.name.split(' ')[0]}}</h2>
-            <h3>{{project.name.split(' ')[1]}}</h3>
-          </header>
-          <main class="slider-discription">
-            <h3>说明</h3>
-            <p>{{project.projectDis}}</p>
-          </main>
-          <footer class="slider-techStack">
-            <h3>技术栈</h3>
-            <div class="slider-techStackIcon">
-              <svg class="icon" aria-hidden="true" v-for="projectIcon in project.projectIcons">
-                <use v-bind:xlink:href="`#icon-${projectIcon}`"></use>
-              </svg>
-            </div>
-          </footer>
-        </div>
-        <div class="imgContainer">
-          <img :src="`/img/projectImgs/${project.projectImg}`" alt="projectImg">
-        </div>
+        <router-link :to="`/project/detail/${project.id}`" class="router-clickArea">
+          <div class="projectInfo">
+            <header class="slider-header">
+              <h2>{{project.name.split(' ')[0]}}</h2>
+              <h3>{{project.name.split(' ')[1]}}</h3>
+            </header>
+            <main class="slider-discription">
+              <h3>说明</h3>
+              <p>{{project.projectDis}}</p>
+            </main>
+            <footer class="slider-techStack">
+              <h3>技术栈</h3>
+              <div class="slider-techStackIcon">
+                <svg class="icon" aria-hidden="true" v-for="projectIcon in project.projectIcons">
+                  <use v-bind:xlink:href="`#icon-${projectIcon}`"></use>
+                </svg>
+              </div>
+            </footer>
+          </div>
+          <div class="imgContainer">
+            <img :src="`/img/projectImgs/${project.projectImg}`" alt="projectImg">
+          </div>
+        </router-link>
       </swiper-slide>
       <!-- Optional controls -->
       <div class="swiper-pagination" slot="pagination"></div>
@@ -81,9 +83,12 @@ export default {
 }
 </script>
 <style lang="scss">
+.router-clickArea {
+	display: flex;
+	height: 500px;
+}
 .slider {
 	height: 500px;
-
 	&:hover {
 		.projectInfo {
 			background: #ffffff;

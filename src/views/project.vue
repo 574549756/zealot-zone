@@ -4,7 +4,7 @@
       <h2>01</h2>
       <h1>Portfolio</h1>
     </div>
-    <div class="clickBox">
+    <div class="clickBox" v-if="!$route.params.id">
       <router-link to="/" class="cross">
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-cross"></use>

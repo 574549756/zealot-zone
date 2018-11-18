@@ -4,6 +4,7 @@ import about from "./views/about"
 import project from "./views/project"
 import blog from "./views/blog"
 import sketch from "./views/sketch"
+import projectDetail from "./components/TabContent/portfolio/projectDetail"
 
 Vue.use(Router)
 
@@ -29,7 +30,14 @@ export default new Router({
 		{
 			path: "/project",
 			name: "project",
-			component: project
+			component: project,
+			children: [
+				{
+					path: "/project/detail/:id",
+					name: "project",
+					component: projectDetail
+				}
+			]
 		},
 		{
 			path: "/blog",

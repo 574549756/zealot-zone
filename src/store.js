@@ -17,6 +17,7 @@ export default new Vuex.Store({
 			connection: [],
 			portfolio: [
 				{
+					id: "canvas",
 					name: "Canvas 画板",
 					projectImg: "canvas.jpg",
 					projectIcons: [
@@ -29,6 +30,7 @@ export default new Vuex.Store({
 						"Canvas画板，通过使用 Canvas API 实现画板的:画笔、橡皮擦、更改颜色、清屏、保存等功能。"
 				},
 				{
+					id: "keyboardNav",
 					name: "KeyBoard 导航页",
 					projectImg: "nav-page.jpg",
 					projectIcons: [
@@ -41,6 +43,7 @@ export default new Vuex.Store({
 						"使用键盘的网页导航，使用原生 JS 监听键盘事件。通过favicon获取网站图标，通过　favicon.byi.pw?url=domain　排除无法获取的网站图标"
 				},
 				{
+					id: "slide",
 					name: "Jquery 无缝轮播组件",
 					projectImg: "slide.jpg",
 					projectIcons: [
@@ -53,6 +56,7 @@ export default new Vuex.Store({
 						"使用 jQuery 制作。通过 settimeout 实现自动轮播，改变 class　状态机的方式来改变监听事件。"
 				},
 				{
+					id: "cssBatman",
 					name: "CSS 蝙蝠侠",
 					projectImg: "cssBatman.png",
 					projectIcons: [
@@ -65,6 +69,7 @@ export default new Vuex.Store({
 						"使用 CSS3 绘制蝙蝠侠，通过 settimeout 实现：代码逐行显示，CSS逐步绘制蝙蝠侠，代码逐个显示速度可调整"
 				},
 				{
+					id: "jqueryMusic",
 					name: "Jquery 我的云音乐",
 					projectImg: "music.png",
 					projectIcons: [
@@ -78,6 +83,7 @@ export default new Vuex.Store({
 						"使用七牛保存歌曲文件，LeanCloud 保存歌曲、歌单信息，通过 leanCloud 中间表指针关联歌单与歌曲。Jquery实现：上传歌曲、歌词，搜索歌曲加入歌单、新建、保存、编辑歌单（后台）;播放歌曲、播放时显示歌词、展示歌单、搜索歌曲、播放（客户端）"
 				},
 				{
+					id: "vueResumer",
 					name: "Vue 在线简历编辑器",
 					projectImg: "vueResume.png",
 					projectIcons: [
@@ -92,6 +98,7 @@ export default new Vuex.Store({
 						"通过 Vue 实现数据绑定，LeanCloud 实现用户注册登录信息的认证， SCSS 完成前端页面。实现在线简历编辑、保存、登陆调取用户数据等功能。"
 				},
 				{
+					id: "stickyNote",
 					name: "Express 在线便利贴",
 					projectImg: "sticky-note.png",
 					projectIcons: [

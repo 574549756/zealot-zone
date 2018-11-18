@@ -1,7 +1,8 @@
 <template>
   <main class="skills-container">
-    <swiper v-bind:projects="$store.state.aboutMe.portfolio"/>
-    <projectsList :projects="$store.state.aboutMe.portfolio"/>
+    <swiper v-if="!$route.params.id" v-bind:projects="$store.state.aboutMe.portfolio"/>
+    <projectsList v-if="!$route.params.id" :projects="$store.state.aboutMe.portfolio"/>
+    <router-view></router-view>
   </main>
 </template>
 <script>
@@ -15,6 +16,9 @@ export default {
 }
 </script>
 <style lang="scss">
+.skills-container {
+	position: relative;
+}
 .slider {
 	margin-bottom: 60px;
 }
