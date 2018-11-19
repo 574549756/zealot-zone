@@ -1,8 +1,14 @@
 <template>
   <main class="skills-container">
-    <swiper v-if="!$route.params.id" v-bind:projects="$store.state.aboutMe.portfolio"/>
-    <projectsList v-if="!$route.params.id" :projects="$store.state.aboutMe.portfolio"/>
-    <router-view></router-view>
+    <transition name="el-fade-in-linear">
+      <swiper v-if="!$route.params.id" v-bind:projects="$store.state.aboutMe.portfolio"/>
+    </transition>
+    <transition name="el-fade-in-linear">
+      <projectsList v-if="!$route.params.id" :projects="$store.state.aboutMe.portfolio"/>
+    </transition>
+    <transition name="el-fade-in-linear">
+      <router-view></router-view>
+    </transition>
   </main>
 </template>
 <script>

@@ -23,6 +23,7 @@ export default new Vuex.Store({
 						"https://574549756.github.io/canvas/index.html",
 					codeLink: "https://github.com/574549756/canvas",
 					projectImg: "canvas.jpg",
+					QRCode: "canvas.png",
 					projectIcons: [
 						"jquery",
 						"html",
@@ -35,6 +36,10 @@ export default new Vuex.Store({
 				{
 					id: "keyboardNav",
 					name: "KeyBoard 导航页",
+					previewUrl:
+						"https://574549756.github.io/myBookmarks/nav-demo/index.html",
+					codeLink:
+						"https://github.com/574549756/myBookmarks",
 					projectImg: "nav-page.jpg",
 					projectIcons: [
 						"jquery",
@@ -48,6 +53,10 @@ export default new Vuex.Store({
 				{
 					id: "slide",
 					name: "Jquery 无缝轮播组件",
+					previewUrl:
+						"https://574549756.github.io/Jquery-slide/index.html",
+					codeLink:
+						"https://github.com/574549756/Jquery-slide",
 					projectImg: "slide.jpg",
 					projectIcons: [
 						"html",
@@ -61,7 +70,12 @@ export default new Vuex.Store({
 				{
 					id: "cssBatman",
 					name: "CSS 蝙蝠侠",
+					previewUrl:
+						"https://574549756.github.io/cssBatman/index.html",
+					codeLink:
+						"https://github.com/574549756/cssBatman",
 					projectImg: "cssBatman.png",
+					QRCode: "cssBatman.png",
 					projectIcons: [
 						"html",
 						"jquery",
@@ -74,6 +88,10 @@ export default new Vuex.Store({
 				{
 					id: "jqueryMusic",
 					name: "Jquery 我的云音乐",
+					previewUrl: "http://163music.zealot.fun/",
+					codeLink:
+						"https://github.com/574549756/koa-163Music-demo",
+					QRCode: "music.png",
 					projectImg: "music.png",
 					projectIcons: [
 						"html",
@@ -88,6 +106,10 @@ export default new Vuex.Store({
 				{
 					id: "vueResumer",
 					name: "Vue 在线简历编辑器",
+					previewUrl:
+						"https://574549756.github.io/vue-resumer-demo/dist/index.html",
+					codeLink:
+						"https://github.com/574549756/vue-resumer-demo",
 					projectImg: "vueResume.png",
 					projectIcons: [
 						"vuejs",
@@ -103,6 +125,10 @@ export default new Vuex.Store({
 				{
 					id: "stickyNote",
 					name: "Express 在线便利贴",
+					previewUrl: "http://sticky-note.zealot.fun/",
+					codeLink:
+						"https://github.com/574549756/express-sticky-note",
+					QRCode: "sticky-note.png",
 					projectImg: "sticky-note.png",
 					projectIcons: [
 						"html",
