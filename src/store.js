@@ -19,6 +19,9 @@ export default new Vuex.Store({
 				{
 					id: "canvas",
 					name: "Canvas 画板",
+					previewUrl:
+						"https://574549756.github.io/canvas/index.html",
+					codeLink: "https://github.com/574549756/canvas",
 					projectImg: "canvas.jpg",
 					projectIcons: [
 						"jquery",
