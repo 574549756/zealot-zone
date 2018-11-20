@@ -20,8 +20,9 @@ export default new Vuex.Store({
 					id: "canvas",
 					name: "Canvas 画板",
 					previewUrl:
-						"https://574549756.github.io/canvas/index.html",
-					codeLink: "https://github.com/574549756/canvas",
+						"https://brendanzhang.github.io/canvas/index.html",
+					codeLink:
+						"https://github.com/brendanzhang/canvas",
 					projectImg: "canvas.jpg",
 					QRCode: "canvas.png",
 					projectIcons: [
@@ -37,9 +38,9 @@ export default new Vuex.Store({
 					id: "keyboardNav",
 					name: "KeyBoard 导航页",
 					previewUrl:
-						"https://574549756.github.io/myBookmarks/nav-demo/index.html",
+						"https://brendanzhang.github.io/myBookmarks/nav-demo/index.html",
 					codeLink:
-						"https://github.com/574549756/myBookmarks",
+						"https://github.com/brendanzhang/myBookmarks",
 					projectImg: "nav-page.jpg",
 					projectIcons: [
 						"jquery",
@@ -54,9 +55,9 @@ export default new Vuex.Store({
 					id: "slide",
 					name: "Jquery 无缝轮播组件",
 					previewUrl:
-						"https://574549756.github.io/Jquery-slide/index.html",
+						"https://brendanzhang.github.io/Jquery-slide/index.html",
 					codeLink:
-						"https://github.com/574549756/Jquery-slide",
+						"https://github.com/brendanzhang/Jquery-slide",
 					projectImg: "slide.jpg",
 					projectIcons: [
 						"html",
@@ -71,9 +72,9 @@ export default new Vuex.Store({
 					id: "cssBatman",
 					name: "CSS 蝙蝠侠",
 					previewUrl:
-						"https://574549756.github.io/cssBatman/index.html",
+						"https://BrendanZhang.github.io/cssBatman/index.html",
 					codeLink:
-						"https://github.com/574549756/cssBatman",
+						"https://github.com/brendanzhang/cssBatman",
 					projectImg: "cssBatman.png",
 					QRCode: "cssBatman.png",
 					projectIcons: [
@@ -90,7 +91,7 @@ export default new Vuex.Store({
 					name: "Jquery 我的云音乐",
 					previewUrl: "http://163music.zealot.fun/",
 					codeLink:
-						"https://github.com/574549756/koa-163Music-demo",
+						"https://github.com/brendanzhang/koa-163Music-demo",
 					QRCode: "music.png",
 					projectImg: "music.png",
 					projectIcons: [
@@ -107,9 +108,9 @@ export default new Vuex.Store({
 					id: "vueResumer",
 					name: "Vue 在线简历编辑器",
 					previewUrl:
-						"https://574549756.github.io/vue-resumer-demo/dist/index.html",
+						"https://brendanzhang.github.io/vue-resumer-demo/dist/index.html",
 					codeLink:
-						"https://github.com/574549756/vue-resumer-demo",
+						"https://github.com/brendanzhang/vue-resumer-demo",
 					projectImg: "vueResume.png",
 					projectIcons: [
 						"vuejs",
@@ -127,7 +128,7 @@ export default new Vuex.Store({
 					name: "Express 在线便利贴",
 					previewUrl: "http://sticky-note.zealot.fun/",
 					codeLink:
-						"https://github.com/574549756/express-sticky-note",
+						"https://github.com/brendanzhang/express-sticky-note",
 					QRCode: "sticky-note.png",
 					projectImg: "sticky-note.png",
 					projectIcons: [

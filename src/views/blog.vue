@@ -23,6 +23,17 @@
         </router-link>
       </div>
     </div>
+    <main class="inner-container">
+      <blogs/>
+    </main>
   </div>
 </template>
+<script>
+import blogs from "../components/TabContent/blogs"
+export default {
+	components: {
+		blogs
+	}
+}
+</script>
 
